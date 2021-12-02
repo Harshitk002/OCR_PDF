@@ -10,10 +10,9 @@ let options={
 	scriptPath:""
 };
 
-
 const app=express();
 app.use(upload());
-app.use('/resources', express.static(path.join(__dirname, './output')));
+app.use('/resources', express.static(path.join(__dirname, './data')));
 
 //static files
 app.use(express.static(__dirname+'/public'))
@@ -24,8 +23,6 @@ app.use('/js',express.static(__dirname+"public/js"))
 app.set('views','./views')
 app.set('view engine','ejs')
 
-//string that will write in the file
-var text=""
 
 //routes
 app.get("/",function(req,res){
@@ -49,17 +46,25 @@ app.post("/",function(req,res){
 		if(err)console.log(err);
 		if(response){
 			let s=response
-			var writeStream = fs.createWriteStream("./output/dynamic_file.txt");
+			var text=" "
 			s.forEach(function(str){
 				text+=str
 				text+=('\n')
 			})
+			var fs = require("fs");
+			fs.writeFileSync("./data/dynamic_file.txt",text,{
+			  encoding: 'utf8',
+			  flag: 'w'
+			})
+		    res.render('download');
 		}
-		writeStream.write(text)	
 	})
-	res.send('File is generated. Click <a href="/resources/dynamic_file.txt"> here </a> to see the file. Save/download the file using ctrl+s')
+	
 
 });
+
+
+
 
 
 app.listen(process.env.PORT || 3000,function(){
