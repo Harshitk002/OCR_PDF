@@ -3,14 +3,17 @@ const express=require("express");
 const upload=require('express-fileupload');
 const fs=require('fs');
 const {PythonShell}=require('python-shell')
+const path = require('path');
 
 //An object for python shell
 let options={
 	scriptPath:""
 };
 
+
 const app=express();
 app.use(upload());
+app.use('/resources', express.static(path.join(__dirname, './output')));
 
 //static files
 app.use(express.static(__dirname+'/public'))
@@ -46,27 +49,17 @@ app.post("/",function(req,res){
 		if(err)console.log(err);
 		if(response){
 			let s=response
-		
+			var writeStream = fs.createWriteStream("./output/dynamic_file.txt");
 			s.forEach(function(str){
 				text+=str
 				text+=('\n')
 			})
 		}
-		fs.writeFile('output/file.txt',text,err=>{
-			if(err)console.log(err);
-			return;
-		});	
+		writeStream.write(text)	
 	})
-	console.log("Saved In Output Folder")
+	res.send('File is generated. Click <a href="/resources/dynamic_file.txt"> here </a> to see the file. Save/download the file using ctrl+s')
+
 });
-
-
-// app.get("/download",function(req,res){
-// 	const file = '${__dirname}/output/file.txt';
-// 	res.download(file);
-// });
-
-
 
 
 app.listen(process.env.PORT || 3000,function(){
