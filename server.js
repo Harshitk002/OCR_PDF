@@ -49,7 +49,7 @@ app.post("/",function(req,res){
 		
 			s.forEach(function(str){
 				text+=str
-				text+='\n'
+				text+=('\n')
 			})
 		}
 		fs.writeFile('output/file.txt',text,err=>{

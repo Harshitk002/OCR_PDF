@@ -1,17 +1,17 @@
 Address:-
-Lauritz Gravell
-Yakidoo
-0 Manley Parkway
-Yingwusitang
+Mellicent Ivoshin
+Dynazzy
+37 Carpenter Court
+Sinilian First
 Invoice number:-
-3031
+2170
 phone number:-
-123-518-2939
+560-390-2703
 email:-
-lgravellnh@imageshack.us
+mivoshincp@gravatar.com
                      DESCRIPTION QTY (hours) UNIT PRICE ($) AMOUNT ($)
-0                    Service Fee           1         200,00     200,00
-1            Additional Services           6          75,00     450,00
+0                    Service Fee           6         200,00   1 200,00
+1            Additional Services           7          75,00     525,00
 2                            NaN         NaN            NaN          -
 3                            NaN         NaN            NaN          -
 4                            NaN         NaN            NaN          -
@@ -28,4 +28,4 @@ lgravellnh@imageshack.us
 15                           NaN         NaN            NaN          -
 16                           NaN         NaN            NaN          -
 17                           NaN         NaN            NaN          -
-18  Thank you for your business!       TOTAL            NaN     650,00
+18  Thank you for your business!       TOTAL            NaN   1 725,00

@@ -55,13 +55,6 @@ body{
     justify-content: center;
     flex-direction: column; */
   }
-  .drag-area.active{
-    border: 2px solid #fff;
-  }
-  .drag-area .icon{
-    font-size: 100px;
-    color: #fff;
-  }
   .drag-area header{
     position: static;
     width: 354px;
@@ -75,13 +68,8 @@ body{
     font-size: 24px;
     line-height: 36px;
 /* identical to box height */
-
-
     color: #00F0FF;
-
-
 /* Inside Auto Layout */
-
     flex: none;
     order: 0;
     flex-grow: 0;
@@ -101,13 +89,8 @@ body{
     font-size: 24px;
     line-height: 36px;
     /* identical to box height */
-
-
     color: #00F0FF;
-
-
     /* Inside Auto Layout */
-
     flex: none;
     order: 1;
     /* flex-grow: 0; */
@@ -164,6 +147,7 @@ body{
     cursor: pointer;
   }
 
+
   .drag-area img{
     height: 100%;
     width: 100%;
@@ -200,11 +184,7 @@ body{
     font-size: 36px;
     line-height: 54px;
     /* identical to box height */
-    
-    
     color: #0F0E22;
-    
-    
     /* Inside Auto Layout */
     
     flex: none;
@@ -226,11 +206,7 @@ body{
     font-size: 24px;
     line-height: 36px;
     /* identical to box height */
-    
-    
     color: #0F0E22;
-    
-    
     /* Inside Auto Layout */
     
     flex: none;
