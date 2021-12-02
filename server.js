@@ -57,15 +57,14 @@ app.post("/",function(req,res){
 			return;
 		});	
 	})
-	res.send("Saved in output folder");
-	//res.download('output/file.txt')
+	console.log("Saved In Output Folder")
 });
 
 
-app.get("/download",function(req,res){
-	let file = "output/file.txt";
-	res.download(file);
-});
+// app.get("/download",function(req,res){
+// 	const file = '${__dirname}/output/file.txt';
+// 	res.download(file);
+// });
 
 
 
